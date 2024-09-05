@@ -80,3 +80,47 @@ function startApp() {
 document.querySelectorAll('nav button').forEach(button => {
     button.addEventListener('click', startApp);
 });
+
+// Function to display the installed apps dropdown
+function showInstalledAppsDropdown() {
+    // Simulating fetching installed apps (this part needs a Cordova plugin)
+    const installedApps = [
+        { name: 'Chrome', packageName: 'com.android.chrome' },
+        { name: 'YouTube', packageName: 'com.google.android.youtube' },
+        { name: 'Gmail', packageName: 'com.google.android.gm' },
+        { name: 'Calculator', packageName: 'com.android.calculator2' }
+    ];
+
+    const appDropdown = document.getElementById('installedApps');
+    appDropdown.innerHTML = ''; // Clear previous options
+    installedApps.forEach(function(app) {
+        const option = document.createElement('option');
+        option.value = app.packageName;
+        option.text = app.name;
+        appDropdown.appendChild(option);
+    });
+
+    document.getElementById('appDropdown').style.display = 'block'; // Show the dropdown
+}
+
+// Function to display the installed apps dropdown
+function showInstalledAppsDropdown() {
+    // Simulating fetching installed apps (this part needs a Cordova plugin)
+    const installedApps = [
+        { name: 'Chrome', packageName: 'com.android.chrome' },
+        { name: 'YouTube', packageName: 'com.google.android.youtube' },
+        { name: 'Gmail', packageName: 'com.google.android.gm' },
+        { name: 'Calculator', packageName: 'com.android.calculator2' }
+    ];
+
+    const appDropdown = document.getElementById('installedApps');
+    appDropdown.innerHTML = ''; // Clear previous options
+    installedApps.forEach(function(app) {
+        const option = document.createElement('option');
+        option.value = app.packageName;
+        option.text = app.name;
+        appDropdown.appendChild(option);
+    });
+
+    document.getElementById('appDropdown').style.display = 'block'; // Show the dropdown
+}
